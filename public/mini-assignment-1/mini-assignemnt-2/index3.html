@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+
+        .progress-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 800px;
+            width: 100%;
+            padding: 20px;
+        }
+
+        .step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            flex: 1;
+        }
+
+        .step-circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #fff;
+            border: 2px solid #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+            font-weight: bold;
+            position: relative;
+            z-index: 2;
+        }
+
+        .step.active .step-circle {
+            background-color: #4285f4;
+            border-color: #4285f4;
+            color: white;
+        }
+
+        .step.completed .step-circle {
+            background-color: #4285f4;
+            border-color: #4285f4;
+            color: white;
+        }
+
+        .step.completed .step-circle::after {
+            content: "✓";
+            font-size: 20px;
+        }
+
+        .step-title {
+            color: #666;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .step.active .step-title {
+            color: #4285f4;
+        }
+
+        .step.completed .step-title {
+            color: #4285f4;
+        }
+
+        .progress-line {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            width: 100%;
+            height: 2px;
+            background-color: #ccc;
+            z-index: 1;
+        }
+
+        .step:last-child .progress-line {
+            display: none;
+        }
+
+        .step.completed .progress-line {
+            background-color: #4285f4;
+        }
+    </style>
+</head>
+<body>
+    <div class="progress-container">
+        <div class="step completed">
+            <div class="step-circle"></div>
+            <div class="progress-line"></div>
+            <div class="step-title">Select campaign settings</div>
+        </div>
+        <div class="step active">
+            <div class="step-circle">2</div>
+            <div class="progress-line"></div>
+            <div class="step-title">Create an ad group</div>
+        </div>
+        <div class="step">
+            <div class="step-circle">3</div>
+            <div class="progress-line"></div>
+            <div class="step-title">Create an ad</div>
+        </div>
+    </div>
+</body>
+</html>

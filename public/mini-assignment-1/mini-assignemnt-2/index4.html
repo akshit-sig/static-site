@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #fff;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+            width: 200px;
+            height: 400px; /* Added fixed height for proper spacing */
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #e0e0e0;
+            transform: translateX(-50%);
+        }
+
+        .step {
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 32px;
+        }
+
+        /* Position each step with equal spacing */
+        .step:nth-child(1) {
+            top: 0;
+        }
+        .step:nth-child(2) {
+            top: 33%;
+        }
+        .step:nth-child(3) {
+            top: 66%;
+        }
+        .step:nth-child(4) {
+            top: 100%;
+            transform: translateY(-32px); /* Adjust for dot height */
+        }
+
+        .step-dot {
+            width: 12px;  /* Reduced dot size */
+            height: 12px; /* Reduced dot size */
+            border-radius: 50%;
+            background-color: #e0e0e0;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+
+        .step-text {
+            font-size: 16px;
+            color: #333;
+            position: absolute;
+            width: 80px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        /* Alternate text positioning */
+        .step:nth-child(odd) .step-text {
+            left: 0;
+            text-align: right;
+            margin-left: -90px;
+        }
+
+        .step:nth-child(even) .step-text {
+            right: 0;
+            text-align: left;
+            margin-right: -90px;
+        }
+
+        /* Specific step colors */
+        .step:nth-child(1) .step-dot {
+            background-color: #e0e0e0;
+        }
+
+        .step:nth-child(2) .step-dot {
+            background-color: #4285f4;
+        }
+
+        .step:nth-child(3) .step-dot {
+            background-color: #ea4335;
+        }
+
+        .step:nth-child(4) .step-dot {
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <div class="timeline">
+        <div class="timeline-line"></div>
+        
+        <div class="step">
+            <div class="step-dot"></div>
+            <div class="step-text">Code</div>
+        </div>
+
+        <div class="step">
+            <div class="step-dot"></div>
+            <div class="step-text">Sleep</div>
+        </div>
+
+        <div class="step">
+            <div class="step-dot"></div>
+            <div class="step-text">Repeat</div>
+        </div>
+
+        <div class="step">
+            <div class="step-dot"></div>
+            <div class="step-text">Eat</div>
+        </div>
+    </div>
+</body>
+</html>

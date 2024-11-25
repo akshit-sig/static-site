@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+
+  .container {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .avatar-group {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+
+  .avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  .avatar-h {
+    background-color: #cccccc;
+  }
+
+  .avatar-n {
+    background-color: #e86034;
+  }
+
+  .avatar-op {
+    background-color: #7a43c9;
+  }
+
+  .btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    transition: opacity 0.2s;
+  }
+
+  .btn:hover {
+    opacity: 0.9;
+  }
+
+  .btn-delete {
+    background-color: #dc3545;
+  }
+
+  .btn-send {
+    background-color: #4285f4;
+  }
+
+  .btn-upload {
+    background-color: #e9ecef;
+    color: #212529;
+  }
+
+  .btn-talk {
+    background-color: #e9ecef;
+    color: #6c757d;
+  }
+
+  .btn-save {
+    background-color: #4285f4;
+  }
+
+  .icon {
+    font-size: 16px;
+  }
+</style>
+</head>
+<body>
+  <div class="avatar-group">
+    <div class="avatar avatar-h">H</div>
+    <div class="avatar avatar-n">N</div>
+    <div class="avatar avatar-op">OP</div>
+  </div>
+
+  <div class="container">
+    <button class="btn btn-delete">
+      <span class="icon">🗑️</span>
+      DELETE
+    </button>
+    
+    <button class="btn btn-send">
+      <span>SEND</span>
+      <span class="icon">➤</span>
+    </button>
+    
+    <button class="btn btn-upload">
+      <span class="icon">☁️</span>
+      UPLOAD
+    </button>
+    
+    <button class="btn btn-talk">
+      <span class="icon">🎤</span>
+      TALK
+    </button>
+    
+    <button class="btn btn-save">
+      <span class="icon">💾</span>
+      SAVE
+    </button>
+    
+  </div>
+</body>
+</html>
